@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 Blog
+  ul
+    each txt in data
+      ul
+        li= txt.blog_id + ': ' + txt.blog_txt
+  nav
+    ul
+      li
+        a(href='/post') Post
+      li
+        a(href='/edit') Edit
+      li
+        a(href='/delete') Delete
