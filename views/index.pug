@@ -1,16 +1,37 @@
 extends layout
 
 block content
-  h1 Blog
+  h1= title
   ul
-    each txt in data
-      ul
-        li= txt.blog_id + ': ' + txt.blog_txt
-  nav
-    ul
-      li
-        a(href='/post') Post
-      li
-        a(href='/edit') Edit
-      li
-        a(href='/delete') Delete
+    each blog in data
+      li= blog.blog_id + ": " + blog.blog_txt
+
+  hr
+  h2 Create Post 
+  form(action="/add", method="POST")
+    div   
+      label(for="blog") Enter title: 
+      input(name="blog", id="blog", value="filler text")
+    div 
+      button Create 
+
+  hr
+  h2 Delete Post 
+  form(action="/delete", method="POST")  
+    div 
+      label(for="blog") Enter Entry ID: 
+      input(name="blog", id="blog", value="1")
+    div 
+      button Delete
+
+  hr
+  h2 Edit Post
+  form(action='/edit' method='POST')
+    div
+      label(for='blog_id') Enter post ID:
+      input#blog_id(name='blog_id' value='1')
+    div
+      label(for='txt') Edited post text:
+      input#txt(type='text' name='txt' value='Edited text here...')
+    div
+      button Edit Post
