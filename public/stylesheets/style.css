@@ -1,8 +1,92 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  background-color: rgb(119, 104, 89);
 }
 
-a {
-  color: #00B7FF;
+.navBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  display: inline-block;
+}
+
+.mainBlog {
+  font-size: 18px;
+  list-style: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 2px solid blue;
+  border-radius: 5px;
+}
+
+.logo {
+  width: 150px;
+  border-radius: 5px;
+}
+
+li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+nav {
+  padding-top: 50px;
+  padding-left: 50px;
+  display: flex;
+}
+
+nav ul {
+  padding-top: 10px;
+  list-style-type: none;
+}
+
+nav li {
+  display: inline;
+  padding-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  background-color: chartreuse;
+  color: maroon;
+  border-radius: 8px;
+  box-shadow: 0 0 8px black, 0 0 12px gray;
+}
+
+nav a:hover {
+  color: red;
+  border-radius: 10px;
+}
+
+#section {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid blue;
+  border-radius: 5px;
+}
+
+#button {
+  transition: all .1s ease-in-out;
+  box-shadow: 0 0 8px black, 0 0 12px gray;
+}
+
+#button:hover {
+  transform: scale(1.5);
+}
+
+.createButton {
+  background-color: lime;
+}
+
+.editButton {
+  background-color: rgb(11, 179, 179);
+}
+
+.deleteButton {
+  background-color: rgb(255, 67, 67);
 }

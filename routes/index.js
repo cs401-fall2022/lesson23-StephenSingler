@@ -26,11 +26,11 @@ router.get('/', function (req, res, next) {
                      blog_id INTEGER PRIMARY KEY AUTOINCREMENT,
                      blog_txt text NOT NULL);
                       INSERT INTO blog (blog_txt)
-                      VALUES ('entry 1'),
-                             ('entry 2');`,
+                      VALUES ('This is the first entry on the blog !!'),
+                             ('Heres the second one, some filler text for you.');`,
               () => {
                 db.all(`SELECT blog_id, blog_txt FROM blog`, (err, rows) => {
-                  res.render('index', { title: 'Express', data: rows });
+                  res.render('index', { title: 'My ePiC Blog', data: rows });
                 });
               });
           }

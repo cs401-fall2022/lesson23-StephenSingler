@@ -1,7 +1,22 @@
 doctype html
 html
   head
-    title= title
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title My ePiC Blog
     link(rel='stylesheet', href='/stylesheets/style.css')
+    div(class='navBar')
+      a(href='')
+        img(class='logo', src='/images/icon.png', alt='logo')
+      h1 My ePiC Blog
+      nav
+        ul
+          li
+            a(href="#create") Create
+          li
+            a(href="#edit") Edit
+          li
+            a(href="#delete") Delete
   body
     block content
